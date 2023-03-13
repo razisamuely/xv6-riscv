@@ -92,6 +92,7 @@ extern uint64 sys_fork(void);
 extern uint64 sys_fstat(void);
 extern uint64 sys_getpid(void);
 extern uint64 sys_kill(void);
+extern uint64 sys_newsyscall(void);
 extern uint64 sys_link(void);
 extern uint64 sys_mkdir(void);
 extern uint64 sys_mknod(void);
@@ -113,6 +114,7 @@ static uint64 (*syscalls[])(void) = {
 [SYS_pipe]    sys_pipe,
 [SYS_read]    sys_read,
 [SYS_kill]    sys_kill,
+[SYS_newsyscall]     sys_newsyscall,
 [SYS_exec]    sys_exec,
 [SYS_fstat]   sys_fstat,
 [SYS_chdir]   sys_chdir,

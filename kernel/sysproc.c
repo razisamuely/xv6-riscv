@@ -83,6 +83,16 @@ sys_kill(void)
   return kill(pid);
 }
 
+uint64
+sys_newsyscall(void)
+{
+  int pid;
+
+  if(argint(0, &pid) < 0)
+    return -1;
+  return newsyscall(pid);
+}
+
 // return how many clock tick interrupts have occurred
 // since start.
 uint64
@@ -97,9 +107,3 @@ sys_uptime(void)
 }
 
 
- uint64
-sys_newsyscall(void)
-{
-// from here you can call other function in the kernal from proc.c or trap.c and many others places
-return 0;
-}

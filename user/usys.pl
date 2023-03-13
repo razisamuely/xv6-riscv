@@ -23,6 +23,7 @@ entry("read");
 entry("write");
 entry("close");
 entry("kill");
+entry("newsyscall");
 entry("exec");
 entry("open");
 entry("mknod");
